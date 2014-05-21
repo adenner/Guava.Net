@@ -41,7 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\IPredicate.cs" />
+    <Compile Include="Base\Preconditions.cs" />
+    <Compile Include="Collection\BitArrayHelper.cs" />
     <Compile Include="Hash\BloomFilter.cs" />
+    <Compile Include="Hash\Funnel.cs" />
     <Compile Include="Math\DoubleUtils.cs" />
     <Compile Include="Math\MathPreconditions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
