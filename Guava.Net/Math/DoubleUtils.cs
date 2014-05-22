@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-namespace Guava.Net.Math
+namespace Guava.Math
 {
     /// <summary>
     /// Utilities for double primitives.

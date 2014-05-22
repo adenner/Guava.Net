@@ -1,5 +1,5 @@
-﻿using Guava.Net.Base;
-using Guava.Net.Collection;
+﻿using Guava.Base;
+using Guava.Collection;
 using System;
 using System.Collections;
 using System.Runtime.Serialization;
@@ -20,7 +20,7 @@ using System.Runtime.Serialization;
  * limitations under the License.
  */
 
-namespace Guava.Net.Hash
+namespace Guava.Hash
 {
     public sealed class BloomFilter<T> : IPredicate<T>, ISerializable 
     {
@@ -136,7 +136,7 @@ namespace Guava.Net.Hash
         /// </summary>
         public bool IsCompatible(BloomFilter<T> that)
         {
-            that.CheckNotNull();
+            Preconditions.CheckNotNull(that);
 
             return (this != that) &&
                 this.numOfHashFunctions == that.numOfHashFunctions &&

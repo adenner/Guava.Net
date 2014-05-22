@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-namespace Guava.Net.Base
+namespace Guava.Base
 {
     /// <summary>
     /// Determines a true or false value for a given input.

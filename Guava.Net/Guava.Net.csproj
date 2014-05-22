@@ -7,7 +7,7 @@
     <ProjectGuid>{37A4CAE7-96C0-4230-9583-875E427C9E60}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Guava.Net</RootNamespace>
+    <RootNamespace>Guava</RootNamespace>
     <AssemblyName>Guava.Net</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -46,6 +46,7 @@
     <Compile Include="Hash\BloomFilter.cs" />
     <Compile Include="Hash\Funnel.cs" />
     <Compile Include="Math\DoubleUtils.cs" />
+    <Compile Include="Math\IntMath.cs" />
     <Compile Include="Math\MathPreconditions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
