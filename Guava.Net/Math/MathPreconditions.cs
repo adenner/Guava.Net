@@ -17,7 +17,7 @@ using System.Numerics;
  * limitations under the License.
  */
 
-namespace Guava.Net.Math
+namespace Guava.Math
 {
     /// <summary>
     /// A collection of preconditions for math functions.
@@ -42,22 +42,60 @@ namespace Guava.Net.Math
             return x;
         }
 
+        //public static float CheckPositive(this float x, string role)
+        //{
+        //    if (x <= 0) { throw new ArgumentOutOfRangeException(role + " (" + x + ") must be > 0"); }
+        //    return x;
+        //}
+
         public static int CheckNonNegative(this int x, string role)
         {
-            if (x < 0) { throw new ArgumentOutOfRangeException(role + " (" + x + ") must be > 0"); }
+            if (x < 0) { throw new ArgumentOutOfRangeException(role + " (" + x + ") must be >= 0"); }
             return x;
         }
 
         public static long CheckNonNegative(this long x, string role)
         {
-            if (x < 0) { throw new ArgumentOutOfRangeException(role + " (" + x + ") must be > 0"); }
+            if (x < 0) { throw new ArgumentOutOfRangeException(role + " (" + x + ") must be >= 0"); }
             return x;
         }
 
         public static BigInteger CheckNonNegative(this BigInteger x, string role)
         {
-            if (x.Sign < 0) { throw new ArgumentOutOfRangeException(role + " (" + x + ") must be > 0"); }
+            if (x.Sign < 0) { throw new ArgumentOutOfRangeException(role + " (" + x + ") must be >= 0"); }
             return x;
+        }
+
+        public static float CheckNonNegative(this float x, string role)
+        {
+            if (!(x >= 0)) // X < 0 to work with NaN.
+                throw new ArgumentOutOfRangeException(role + " (" + x + ") must be >= 0");
+            return x;
+        }
+
+        public static double CheckNonNegative(this double x, string role)
+        {
+            if (!(x >= 0)) // X < 0 to work with NaN.
+                throw new ArgumentOutOfRangeException(role + " (" + x + ") must be >= 0");
+            return x;
+        }
+
+        public static void CheckRoundingUnnescessary(bool condition)
+        {
+            if (!condition)
+                throw new ArithmeticException("Mode was UNNECESSARY, but rounding was necessary");
+        }
+
+        public static void CheckInRange(bool condition)
+        {
+            if (!condition)
+                throw new ArithmeticException("Not in range");
+        }
+
+        public static void CheckNoOverflow(bool condition)
+        {
+            if (!condition)
+                throw new ArithmeticException("Overflow");
         }
     }
 }
