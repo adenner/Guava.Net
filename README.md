@@ -1,10 +1,8 @@
 Guava.Net
 =========
 
-A port of Google's [Guava Libraries](https://code.google.com/p/guava-libraries/) to C#
+A port of Google's [Guava Libraries](https://code.google.com/p/guava-libraries/) from Java to C#.
 
-
-This project is mostly an excuse to work through a mature set of libraries rather than produce something production ready.  The features provided by Guava may already exist in .Net libraries so watch out for "Reinventing the Wheel" if you decide to use anything.
-
+The goal of this project is to learn by working through a mature set of common libraries.  I'm not aiming to produce something production ready and some of the features provided by Guava may already exist in .Net libraries.
 
 [Licenced under Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
