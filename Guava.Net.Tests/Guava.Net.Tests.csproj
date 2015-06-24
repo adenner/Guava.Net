@@ -52,6 +52,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Base\PreconditionsTests.cs" />
+    <Compile Include="Collection\StaticListTests.cs" />
     <Compile Include="Math\IntMathTests.cs" />
     <Compile Include="Math\MathPreconditionsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

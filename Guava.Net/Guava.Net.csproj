@@ -45,6 +45,8 @@
     <Compile Include="Base\IPredicate.cs" />
     <Compile Include="Base\Preconditions.cs" />
     <Compile Include="Collection\BitArrayHelper.cs" />
+    <Compile Include="Collection\StaticList.cs" />
+    <Compile Include="Collection\StaticListBuilder.cs" />
     <Compile Include="Hash\BloomFilter.cs" />
     <Compile Include="Hash\Funnel.cs" />
     <Compile Include="Math\DoubleUtils.cs" />
