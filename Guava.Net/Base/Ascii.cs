@@ -38,6 +38,15 @@ namespace Guava.Base
         public static readonly byte NUL = 0;
 
         #endregion
+        /// <summary>
+        /// Returns a copy of the input string where all of the lower case characters have been converted to upper case.
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        public static String ToUpperCase(String str)
+        {
+            return str.ToUpper();
+        }
 
         /// <summary>
         /// Returns a copy of the input string in which all Upper Case ASCII characters
@@ -47,22 +56,7 @@ namespace Guava.Base
         /// <returns></returns>
         public static String ToLowerCase(String str)
         {
-            for (int i = 0; i < str.Length; i++)
-            {
-                // If we find an upper case character will convert all the characters that follow.
-                if (IsUpperCase(str[i]))
-                {
-                    char[] chars = str.ToCharArray(); // Creates copy to modify 
-                    for (; i < str.Length; i++)
-                    {
-                        char c = chars[i];
-                        if (IsUpperCase(c))
-                            chars[i] = (char)(c ^ 0x20); // XOR 6th bit to convert to all lower case Ex: A = 01000001 => a = 01100001
-                    }
-                    return chars.ToString();
-                }
-            }
-            return str;
+            return str.ToLower(); //.net already has this in the string library
         }
 
         public static char ToLowerCase(char c)
